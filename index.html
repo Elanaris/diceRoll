@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fantasy RPG Page</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Zen+Kaku+Gothic+Antique:wght@400;900&family=Montserrat:wght@100;400;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+  <!-- Style Sheet -->
+  <link rel="stylesheet" href="css/styles-yellow.css">
+  <link rel="stylesheet" href="css/dices.css">
+
+</head>
+
+<body>
+
+  <!-- HEADER SECTION -->
+  <div id="header" class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="">Fantasy RPG Page</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav nav nav-pills nav-fill ms-auto align-items-end">
+          <li class="nav-item">
+            <a class="nav-link" href="">Generators</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link active" href="">Dice Roll</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Fight Simulator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Quizzes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Prompts</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- MAIN PAGE -->
+  <div id="dice-roll" class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1 class="page-title">Dice Roll</h1>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col">
+      </div>
+      <div id="dices" class="col">
+      </div>
+      <div class="col text-start">
+        <button class="my-btn my-btn-round" data-bs-toggle="collapse" data-bs-target="#dice-menu">+</button>
+        <div id="dice-menu" class="collapse">
+          <select id="chosen-dice" class="form-select form-select-sm">
+            <option>d4</option>
+            <option>d6</option>
+            <option>d8</option>
+            <option>d10</option>
+            <option>d12</option>
+            <option>d20</option>
+            <option>d48</option>
+            <option>d100</option>
+          </select>
+          <select id="chosen-colour" class="form-select form-select-sm">
+            <option>black</option>
+            <option>blue</option>
+            <option>green</option>
+            <option>orange</option>
+            <option>purple</option>
+            <option>red</option>
+          </select>
+          <button id="add-btn" class="my-btn my-btn-small">Add Dice</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col">
+      </div>
+      <div class="col">
+        <p id="total">Total: 3</p>
+        <p id="stunt">Stunt: 1</p>
+      </div>
+      <div class="col text-start">
+        <button id="stunt-btn" type="button" class="my-btn my-btn-round" data-bs-toggle="popover" title="Stunt"
+          data-bs-content="Stunt is checked if there are three d6 dices. If two of them have the same value, the third dice is the stunt dice.">?</button>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col">
+        <button id="refresh-btn" class="my-btn">Roll Dices</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <div id="footer" class="container-fluid">
+      <hr />
+      <p>
+        made by Anna Tumova
+      </p>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="scripts/index.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

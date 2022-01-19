@@ -1,0 +1,62 @@
+.d4, .d8, .d10, .d12, .d20, .d48, .d100 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.d4 {
+  padding: 35px;
+}
+
+.d6 {
+  font-size: 6rem;
+}
+
+.d6.black {
+  color: #1b1b1b;
+}
+
+.d6.blue {
+  color: #2086AE;
+}
+
+.d6.green {
+  color: #1F8327;
+}
+
+.d6.orange {
+  color: #C9995D;
+}
+
+.d6.purple {
+  color: #693971;
+}
+
+.d6.red {
+  color: #AF2413;
+}
+
+.d8 {
+  padding: 30px;
+}
+
+.d10 {
+  padding-top: 17px;
+  padding-left: 12px;
+}
+
+.d12 {
+  padding: 30px;
+}
+
+.d20 {
+  padding: 30px;
+}
+
+.d48 {
+  padding: 32px;
+}
+
+.d100 {
+  padding: 30px;
+}
